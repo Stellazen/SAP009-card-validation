@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    font-family: 'Corben', cursive;;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 20px;
+    
+}
+
+.cartao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: aliceblue;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-image: linear-gradient(50deg, rgb(203, 109, 240), rgb(58, 23, 90), rgb(88, 24, 75)
+    );
+}
+
+input{
+    border-radius: 5px;
+    padding: 3px;
+    border: none;
+    font-family:'Roboto Mono', monospace;;
+}
+
+.validade_e_cvv{
+    display: flex;
+    gap:8px;
+}
+
+.input_nome{
+    width: 270px;
+}
+.input_numeros{
+    width: 190px;
+}
+.input_validade{
+    width: 150px;
+}
+.input_cvv{
+    width: 40px;
+}
+
+.botao{
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    font-family: 'Corben', cursive;
+    font-size: 17px;
+    text-align: center; 
+    transition: 0.5s;   
+}
+.botao:hover{
+    color: white;
+    background-color: rgb(58, 23, 90);
+    cursor: pointer;
+}

@@ -12,13 +12,32 @@
     </header>
 
     <main>
+      <div class="container">
+        <h1>Insira os dados do cartão: </h1>
+        <div class="cartao">
+          <p>Nome: <input class="input_nome" type="text" name="nome" id="inome" placeholder="ex.: Maria Alice Santos" minlength="2"></p>
+          <div class="mensagem-erro"></div>
+          <p>Número do Cartão: <input class="input_numeros" type="text" name="num" id="inum" minlength="13" maxlength="16" placeholder="ex.: 0000-0000-0000-0000" onkeypress="return event.charCode >= 48 && event.charCode <= 57" ></p>
+          <div class="mensagem-erro"></div>
 
-
+          <div class="validade_e_cvv">
+            <p>Validade: <input class="input_validade" type="month" name="val" id="ival"></p>
+            <div class="mensagem-erro"></div>
+            <p>CVV: <input class="input_cvv" type="text" name="cvv" id="icvv" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="3" placeholder="XXX"></p>
+            <div class="mensagem-erro"></div>
+          </div>
+          
+          <input type="button" class="botao" value="Validar" onclick="validar()">
+        </div>
+        <div class="validacao"></div>
+      </div>
+      
     </main>
 
     <footer>
-      
+
     </footer>
-    <script src="index.js" type="module"></script>
+
+    <script src="index.js" defer></script>
   </body>
 </html>

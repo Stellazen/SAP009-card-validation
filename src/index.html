@@ -8,17 +8,20 @@
   <body>
 
     <header>
-
+      <div class="cabecalho">
+        <p>Obrigada pela sua compra!</p>
+      </div>
     </header>
 
     <main>
       <div class="container">
-        <h1>Insira os dados do cartão: </h1>
+        <h1>Para prosseguir, insira os dados do cartão: </h1>
         <div class="cartao">
-          <p>Nome: <input class="input_nome" type="text" name="nome" id="inome" placeholder="ex.: Maria Alice Santos" minlength="2"></p>
-          <div class="mensagem-erro"></div>
-          <p>Número do Cartão: <input class="input_numeros" type="text" name="num" id="inum" minlength="13" maxlength="16" placeholder="ex.: 0000-0000-0000-0000" onkeypress="return event.charCode >= 48 && event.charCode <= 57" ></p>
-          <div class="mensagem-erro"></div>
+          <p>Nome: <input class="input_nome" type="text" name="nome" id="inome" placeholder="ex.: Maria Alice Santos" minlength="2" required></p>
+          <div id="nome_obrigatorio" class="mensagem-erro"></div>
+
+          <p>Número do Cartão: <input class="input_numeros" type="text" name="num" id="inum" minlength="13" maxlength="16" placeholder="ex.: 0000-0000-0000-0000" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required ></p>
+          <div id="num_obrigatorio" class="mensagem-erro"></div>
 
           <div class="validade_e_cvv">
             <p>Validade: <input class="input_validade" type="month" name="val" id="ival"></p>

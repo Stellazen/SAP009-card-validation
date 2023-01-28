@@ -24,19 +24,39 @@ botao.onclick = function validar(){
    const Arr = Array.from(numerosInvertidos);
    console.log(Arr);
 
-   let segundoDigito = Arr.map(function(element, index){
-    console.log(element);
-    console.log(index);
+   let dobrarDigito = Arr.map(function(element, index){
+    // console.log(element);
+    // console.log(index);
     if(index % 2 === 0){
         return element*2;
     }else return element;
     });
+    console.log(dobrarDigito);
 
+    let subtrairDigito = dobrarDigito.map(function(element,index){
+        if(index % 2 ===0){
+            if(element > 9){
+                return element - 9;
+            }else return element;
+        }else return element;
+    });
+    console.log(subtrairDigito);
 
-  console.log(segundoDigito);
+    var numberArray = subtrairDigito.map(Number);
+    console.log(numberArray);
+
+    var soma = numberArray.reduce(function(soma,i){
+      return soma + i;
+    });
+     console.log(soma);
+
 
     var resultado = document.querySelector(".validacao");
-    resultado.innerText = "Os números inseridos foram " + numeros;
+    if(soma % 10 === 0){
+        resultado.innerText = "Cartão Válido. Obrigada pela sua compra!"
+    }else{
+        resultado.innerText = "Cartão Inválido. Tente novamente."
+    }
 
     if(nome_inserido.value.length === 0){
         nome_obrigatorio.innerText = "Este campo não pode ficar vazio"

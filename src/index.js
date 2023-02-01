@@ -62,7 +62,30 @@ botao.onclick = function validar(){
         }else{
             resultado.innerText = "Cartão Inválido. Tente novamente."
         }
+
+        //pegar o valor digitado
+       
+        //substituir os números por # com exceção dos últimos 4
+            //pegar 4 últimos dígitos
+            //contar quantos dig tem antes dos últimos 4
+            //montar uma string que tem a quantidade de dígitos, subtitiudos por#
+            //somar com os últimos 4
+        
+        //printar esse resultado no input
+       
+       
+        function maskfy(valorDigitado){
+            console.log(valorDigitado);
+            var indice = valorDigitado.length - 4;
+            var indice4 = valorDigitado.substring(indice);
+            console.log(indice4);
+        }
+        maskfy(input.value);
+        
     }
+
+
+
 
     // //MASKFY
 

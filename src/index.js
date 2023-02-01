@@ -2,67 +2,91 @@
 
 // console.log(validator);
 
-var botao = document.querySelector(".botao");
+//VALIDAÇÃO DO CARTÃO:
 
-var numeros = [];
-
-var nome_obrigatorio = document.getElementById("nome_obrigatorio");
-var nome_inserido = document.getElementById("inome");
+var botao = document.querySelector(".botao"); 
 var num_obrigatorio = document.getElementById("num_obrigatorio");
 
 botao.onclick = function validar(){
 
+    var numeros = [];
     var input = document.getElementById("inum");
+
+    if(input.value.length <= 12){
+        num_obrigatorio.innerText = "Este campo está incompleto, preencha-o corretamente."
     
-    numeros.push(input.value);
+    }else{
 
-    var numerosInvertidos = input.value.split('').reverse().join('');
+        num_obrigatorio.innerHTML = ""
 
-    console.log(numeros);
-    console.log(numerosInvertidos);
+        numeros.push(input.value);
 
-   const Arr = Array.from(numerosInvertidos);
-   console.log(Arr);
+        var numerosInvertidos = input.value.split('').reverse().join('');
 
-   let dobrarDigito = Arr.map(function(element, index){
-    // console.log(element);
-    // console.log(index);
-    if(index % 2 === 0){
-        return element*2;
-    }else return element;
-    });
-    console.log(dobrarDigito);
+        console.log(numeros);
+        console.log(numerosInvertidos);
 
-    let subtrairDigito = dobrarDigito.map(function(element,index){
-        if(index % 2 ===0){
-            if(element > 9){
-                return element - 9;
+    const Arr = Array.from(numerosInvertidos);
+    console.log(Arr);
+
+    let dobrarDigito = Arr.map(function(element, index){
+        // console.log(element);
+        // console.log(index);
+        if(index % 2 === 0){
+            return element;
+        }else return element*2;
+        });
+        console.log(dobrarDigito);
+
+        let subtrairDigito = dobrarDigito.map(function(element,index){
+            if(index % 2 ===0){
+                return element;
+                }else if(element > 9)
+                { return element - 9;
             }else return element;
-        }else return element;
-    });
-    console.log(subtrairDigito);
+        });
+        console.log(subtrairDigito);
 
-    var numberArray = subtrairDigito.map(Number);
-    console.log(numberArray);
+        var numberArray = subtrairDigito.map(Number);
+        console.log(numberArray);
 
-    var soma = numberArray.reduce(function(soma,i){
-      return soma + i;
-    });
-     console.log(soma);
+        var soma = numberArray.reduce(function(soma,i){
+        return soma + i;
+        });
+        console.log(soma);
 
 
-    var resultado = document.querySelector(".validacao");
-    if(soma % 10 === 0){
-        resultado.innerText = "Cartão Válido. Obrigada pela sua compra!"
-    }else{
-        resultado.innerText = "Cartão Inválido. Tente novamente."
+        var resultado = document.querySelector(".validacao");
+        if(soma % 10 === 0){
+            resultado.innerText = "Cartão Válido. Obrigada pela sua compra!"
+        }else{
+            resultado.innerText = "Cartão Inválido. Tente novamente."
+        }
     }
 
-    if(nome_inserido.value.length === 0){
-        nome_obrigatorio.innerText = "Este campo não pode ficar vazio"
-    }else if(input.value.length === 0){
-        num_obrigatorio.innerText = "Este campo não pode ficar vazio"
-    }else{
-        
-    }
+    // //MASKFY
+
+    // function mascara(o,f){
+    //     v_obj=o
+    //     v_fun=f
+    //     setTimeout("execmascara()",1)
+    // }
+    // function execmascara(){
+    //     v_obj.value=v_fun(v_obj.value)
+    // }
+    // function mcc(v){
+    //     v=v.replace(/\D/g,"");
+    //     v=v.replace(/^(\d{4})(\d)/g,"$1 $2");
+    //     v=v.replace(/^(\d{4})\s(\d{4})(\d)/g,"$1 $2 $3");
+    //     v=v.replace(/^(\d{4})\s(\d{4})\s(\d{4})(\d)/g,"$1 $2 $3 $4");
+    //     return v;
+    // }
+    // function id( el ){
+    //     return document.getElementById( el );
+    // }
+    // window.onload = function(){
+    //     id('cc').onkeypress = function(){
+    //         mascara( this, mcc );
+    //     }
+    // }
 }

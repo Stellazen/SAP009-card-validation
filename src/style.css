@@ -10,19 +10,19 @@
 }
 
 .cabecalho{
-    background-color: #8A491C;
+    background-color: #095057;
     height: 50px;
     text-align: center;
     padding-top: 8px;
-    color: #fabf95;
+    color: #f8f8f8;
     font-size: 18px;
 }
 
 main, body{
     font-family: 'Corben', cursive;
-    background-color: #fabf95;
+    background-color: #fafafa;
     background-image: url();
-
+    text-align: center;
 }
 
 .container{
@@ -31,7 +31,7 @@ main, body{
     justify-content: center;
     align-items: center;
     margin: 20px;
-    color:#8A491C;
+    color:#095057;
     
 }
 
@@ -54,7 +54,18 @@ input{
     padding: 3px;
     border: none;
     font-family:'Roboto Mono', monospace;
-    margin: 10px;
+    margin: 15px;
+
+}
+
+.campo{
+    font-family:'Roboto Mono', monospace;
+    background-color: aliceblue;
+    padding: 3px;
+    border-radius: 5px;
+    color: #0E7F8A;
+    font-size: 14px;
+    margin: 5px;
 }
 
 .validade_e_cvv{
@@ -67,12 +78,6 @@ input{
 }
 .input_numeros{
     width: 190px;
-}
-.input_validade{
-    width: 150px;
-}
-.input_cvv{
-    width: 40px;
 }
 
 .mensagem-erro{
@@ -90,6 +95,6 @@ input{
 }
 .botao:hover{
     color: white;
-    background-color: #0E7F8A;
+    background-color: #095057;
     cursor: pointer;
 }

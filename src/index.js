@@ -54,6 +54,13 @@ botao.onclick = function validar(){
         return soma + i;
         });
         console.log(soma);
+        
+        // var resultado = document.querySelector(".validacao");
+        // if(soma % 10 === 0){
+        //     resultado.innerText = "Cartão Válido. Obrigada pela sua compra!"
+        // }else{
+        //     resultado.innerText = "Cartão Inválido. Tente novamente."
+        // }
 
 
         
@@ -67,6 +74,10 @@ botao.onclick = function validar(){
             //somar com os últimos 4
         
         //printar esse resultado no input
+
+        function limparInput(){
+            input.value = "";
+        }
        
        
         function maskfy(valorDigitado){
@@ -75,19 +86,18 @@ botao.onclick = function validar(){
             var indice4 = valorDigitado.substring(indice);
             console.log(indice4);
             console.log(indice);
-            console.log('#'.repeat(indice)+indice4)
+            var mascara = '#'.repeat(indice)+indice4;
+            console.log(mascara);
+            var resultado = document.querySelector(".validacao");
+            
+            if(soma % 10 === 0){
+                limparInput;
+                resultado.innerHTML = "O número inserido foi " + mascara +  "<br>Cartão Válido. Obrigada pela sua compra!"
+            }else{
+                resultado.innerHTML = "O número inserido foi " + mascara + "<br>Cartão Inválido. Tente novamente."
+            }  
         }
-        
         maskfy(input.value);
-        
-
-        var resultado = document.querySelector(".validacao");
-        if(soma % 10 === 0){
-            resultado.innerText = "Cartão Válido. Obrigada pela sua compra!"
-        }else{
-            resultado.innerText = "Cartão Inválido. Tente novamente."
-        }
-
         
     }
 

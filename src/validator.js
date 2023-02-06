@@ -1,5 +1,5 @@
 const validator = {
-isValid : function isValidCard(numeros){
+isValid : function isValidCard(){
 
     //lógica da validação:
     //pegar números digitados no input
@@ -9,7 +9,7 @@ isValid : function isValidCard(numeros){
     //tranformar todos os números em uma string única
     //somar todos os números
     //se o resultado for igual a um múltiplo de 10 = cartão válido
-    
+
     var num_obrigatorio = document.getElementById("num_obrigatorio");
     var numeros = [];
     var input = document.getElementById("inum");

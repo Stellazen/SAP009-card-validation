@@ -6,9 +6,9 @@ var botao = document.querySelector(".botao");
 
 botao.onclick = function validar(){
 
-     isValidCard(numeros);
+     isValidCard();
      maskfy(input.value);
-     
+
 }
 
 

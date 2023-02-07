@@ -69,6 +69,7 @@ input{
 }
 
 .validade_e_cvv{
+    margin-top:20px;
     display: flex;
     gap:8px;
 }
@@ -81,7 +82,9 @@ input{
 }
 
 .mensagem-erro{
+    padding: 3px;
     font-size: 12px;
+    position: absolute;
 }
 
 .botao{

@@ -7,7 +7,7 @@ botao.onclick = function validar(){
     let input = document.getElementById("inum");
     let resultado = document.querySelector(".validacao");
 
-    if(input.value<= 10){
+    if(input.value <= 10){
      num_obrigatorio.innerHTML = "Este campo está incompleto. Por favor digite novamente."
     }else{
      num_obrigatorio.innerHTML = "";

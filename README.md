@@ -10,4 +10,8 @@ A validação é realizada com o Algoritmo de Lunh, que funciona da seguinte man
 O projeto foi feito pensando na praticidade de quem iria utilizá-lo (no caso, alunas e mentoras da Laboratória) e por isso a única entrada requisitada é o de números para a verificação do cartão. Não é possível avançar se o campo não estiver completo (com ao menos 10 dígitos). Ao clicar no botão de 'Verificar' ele realizará os testes e retornará se o número inserido é válido ou não.
 As cores foram pensadas para serem simples e minimalistas e passarem a sensação de frescor e leveza.
 
+<a href="https://stellazen.github.io/SAP009-card-validation/src/">💳Link para o projeto </a>
+
 ![image](https://user-images.githubusercontent.com/109876174/217306089-46b3aa80-1f46-4628-9b09-0800910dbfff.png)
+
+
